@@ -1,0 +1,39 @@
+
+// Aluno Kaynan Andrey Hermano Siqueira
+// Questão 01
+
+#include <stdio.h>
+
+int letra_a(int A, int B, int C) {
+    return A && (B || C);
+}
+
+int letra_b(int A, int B, int C) {
+    return (A && B) || C;
+}
+
+int letra_c(int A, int B, int C) {
+    return !(A && B) || C;
+}
+
+int letra_d(int A, int B, int C) {
+    return !A || !(!B && C);
+}
+
+int letra_e(int A, int B, int C) {
+    return A || !(B || C);
+}
+
+int atividade_04() {
+    int A = 1;
+    int B = 0;
+    int C = 1;
+
+    printf("a. A ^ (B v C) = %s\n", letra_a(A, B, C) ? "Verdadeiro" : "Falso");
+    printf("b. (A ^ B) v C = %s\n", letra_b(A, B, C) ? "Verdadeiro" : "Falso");
+    printf("c. (A ^ B)' v C = %s\n", letra_c(A, B, C) ? "Verdadeiro" : "Falso");
+    printf("d. A' v (B' ^ C)' = %s\n", letra_d(A, B, C) ? "Verdadeiro" : "Falso");
+    printf("e. A v (B v C)' = %s\n", letra_e(A, B, C) ? "Verdadeiro" : "Falso");
+
+    return 0;
+}

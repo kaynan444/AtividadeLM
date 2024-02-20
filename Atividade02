@@ -1,0 +1,30 @@
+
+// Aluno Kaynan Andrey Hermano Siqueira
+// Questão 02
+
+#include <stdio.h>
+
+int atividade_02() {
+    int num;
+
+    printf("Digite um número inteiro: ");
+    scanf("%d", &num);
+
+    int quadrado = potencia_ao_quad(num);
+
+    int parouimpar(int num) {
+    return num % 2 != 0;
+}
+
+    if (parouimpar(num)) {
+        printf("O quadrado de %d (%d) é ímpar, portanto %d também é ímpar.\n", num, quadrado, num);
+        printf("Para obter o quadrado de %d, é necessário multiplicar %d por %d (%d - 1) que resulta em um número par (%d).\n",
+               num, num, num - 1, num, num * (num - 1));
+        printf("Agora, somamos %d ao resultado e obteremos o quadrado. Logo, concluímos que qualquer que seja o valor ímpar, seu quadrado será um valor ímpar.\n",
+               num);
+    } else {
+        printf("O quadrado de %d é par, portanto não podemos concluir que %d é ímpar.\n", num, num);
+    }
+
+    return 0;
+}

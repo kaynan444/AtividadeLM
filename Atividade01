@@ -1,0 +1,36 @@
+
+// Aluno Kaynan Andrey Hermano Siqueira
+// Questão 01
+
+#include <stdio.h>
+
+int cond_verdadeira(int A, int B, int C) {
+    return ((A || B) && !(A && B)) && !C;
+}
+
+void analisar_cond(int A, int B, int C) {
+    if (cond_verdadeira(A, B, C)) {
+        printf("A condição é verdadeira.\n");
+    } else {
+        printf("A condição é falsa.\n");
+    }
+}
+
+int atividade_01() {
+
+    int A = 1; // Verdadeiro
+    int B = 0; // Falso
+    int C = 0; // Falso
+
+    
+    analisar_cond(A, B, C);
+
+    A = 1; // Verdadeiro
+    B = 1; // Verdadeiro
+    C = 0; // Falso
+
+    
+    analisar_cond(A, B, C);
+
+    return 0;
+}

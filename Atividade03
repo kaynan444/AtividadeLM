@@ -1,0 +1,28 @@
+
+// Aluno Kaynan Andrey Hermano Siqueira
+// Questão 03
+
+#include <stdio.h>
+
+int atividade_03() {
+    int num;
+
+    printf("Digite um número inteiro: ");
+    scanf("%d", &num);
+
+    int potencia_ao_quadrado(int num) {
+    return num * num;
+}
+    int quadrado = potencia_ao_quadrado(num);
+
+    if (par_ou_impar(num)) {
+        printf("O quadrado de %d é ímpar, portanto não podemos concluir que %d é par.\n", num, num);
+    } else {
+        printf("O quadrado de %d (%d) é par, portanto %d também é par.\n", num, quadrado, num);
+        printf("Para obter o quadrado de %d, efetuaremos soma de números pares que por definição, não alteram a condição do número inicial.\n",
+               num);
+        printf("Qualquer que seja o valor par, seu quadrado será um valor par.\n");
+    }
+
+    return 0;
+}

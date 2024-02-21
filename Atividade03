@@ -4,24 +4,30 @@
 
 #include <stdio.h>
 
-int atividade_03() {
-    int num;
-
-    printf("Digite um número inteiro: ");
-    scanf("%d", &num);
-
-    int potencia_ao_quadrado(int num) {
-    return num * num;
+int calcular_produto(int num_par1, int num_par2) {
+    return num_par1 * num_par2;
 }
-    int quadrado = potencia_ao_quadrado(num);
 
-    if (par_ou_impar(num)) {
-        printf("O quadrado de %d é ímpar, portanto não podemos concluir que %d é par.\n", num, num);
+int verificar_par(int num) {
+    return num % 2 == 0;
+}
+
+int main() {
+    int num_par1, num_par2;
+
+    printf("Insira o primeiro número par: ");
+    scanf("%d", &num_par1);
+
+    printf("Insira o segundo número par: ");
+    scanf("%d", &num_par2);
+
+    int produto = calcular_produto(num_par1, num_par2);
+
+    if (verificar_par(produto)) {
+        printf("O produto de %d e %d é %d, que é par.\n", num_par1, num_par2, produto);
+        printf("Concluímos que o produto de quaisquer dois números pares é sempre par.\n");
     } else {
-        printf("O quadrado de %d (%d) é par, portanto %d também é par.\n", num, quadrado, num);
-        printf("Para obter o quadrado de %d, efetuaremos soma de números pares que por definição, não alteram a condição do número inicial.\n",
-               num);
-        printf("Qualquer que seja o valor par, seu quadrado será um valor par.\n");
+        printf("Um dos números inseridos não é par, por favor insira dois números pares.\n");
     }
 
     return 0;
